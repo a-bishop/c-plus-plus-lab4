@@ -52,9 +52,8 @@ int getDigit(int number) {
         int firstNum = number % 10;
         int secondNum = number / 10;
         return firstNum + secondNum;
-    } else {
-        return number;
     }
+    return number;
 }
 
 // iterate through odd nums from right to left, summing them
@@ -77,12 +76,10 @@ bool isValid(const string& cardNumber) {
     if (hasValidPrefix(cardNumber)) {
         if ((sumOfDoubleEvenPlace(cardNumber) + sumOfOddPlace(cardNumber)) % 10 == 0) {
             return true;
-        } else {
-            return false;
         }
-    } else {
         return false;
     }
+    return false;
 }
 
 // test if cardNumber starts with (4, 5, 37, 6)
